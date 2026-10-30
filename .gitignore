@@ -1,0 +1,22 @@
+# Dependencias y artefactos generados
+node_modules/
+dist/
+release/
+work/
+win-unpacked/
+*.exe
+*.blockmap
+builder-debug.yml
+
+# Copias antiguas y contenido extraído usado para recuperación
+base18-extract/
+base18-source/
+
+# Datos locales y temporales
+*.sqlite
+*.sqlite-*
+*.db
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini

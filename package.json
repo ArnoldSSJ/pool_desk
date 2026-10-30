@@ -1,0 +1,57 @@
+{
+  "name": "pooldesk",
+  "version": "1.10.0",
+  "private": true,
+  "description": "Sistema local para la operación de Poolmania y Poolzone con emisión electrónica pendiente de configuración",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist:portable": "electron-builder --win portable --x64",
+    "dist:installer": "electron-builder --win nsis --x64"
+  },
+  "build": {
+    "appId": "pe.pooldesk.desktop",
+    "productName": "PoolDesk BETA 1.10",
+    "compression": "store",
+    "directories": {
+      "output": "../work/build"
+    },
+    "files": [
+      "app/**/*",
+      "main.cjs",
+      "preload.cjs",
+      "package.json"
+    ],
+    "win": {
+      "signExecutable": false,
+      "target": [
+        {
+          "arch": [
+            "x64"
+          ],
+          "target": "nsis"
+        }
+      ],
+      "artifactName": "PoolDesk BETA 1.10 Instalador.${ext}",
+      "icon": "app/assets/icons/pooldesk.ico"
+    },
+    "portable": {
+      "requestExecutionLevel": "user"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PoolDesk BETA 1.10"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.7.2",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "sql.js": "^1.15.0"
+  }
+}

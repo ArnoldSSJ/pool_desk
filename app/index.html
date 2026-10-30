@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PoolDesk BETA 1.10</title>
+<link rel="icon" type="image/png" href="assets/icons/pooldesk.png"><link rel="stylesheet" href="assets/css/app.css"></head>
+<body>
+<div id="login" class="login"><div class="loginbox"><div class="brand"><div class="brandmark">P</div><div><b>POOLDESK</b><small>Operación de sala y caja</small></div></div><h1>Iniciar sesión</h1><p>Ingresa para abrir tu jornada de trabajo.</p><form id="loginForm"><div class="field"><label>Usuario</label><input id="loginUser" autocomplete="username" required placeholder="Ingresa tu usuario"></div><div class="field"><label>Contraseña</label><input id="loginPass" type="password" autocomplete="current-password" required placeholder="••••••••"></div><button class="btn primary">Entrar al sistema</button></form></div></div>
+<div id="app" class="shell hidden"><aside class="sidebar"><div class="brand"><div class="brandmark">P</div><div><b>POOLDESK</b><small>BETA 1.10 · Gestión de billar</small></div></div><div class="navlabel">OPERACIÓN</div><nav class="nav"><button class="active" data-page="salon"><span>▦</span>Salón</button><button data-page="inventario"><span>▤</span>Inventario</button><button data-page="cocina"><span>♨</span>Cocina</button><button data-page="caja"><span>◷</span>Caja</button><button data-page="reportes"><span>▥</span>Reportes</button><button data-page="comprobantes"><span>▧</span>Comprobantes</button></nav><div class="navlabel">GESTIÓN</div><nav class="nav"><button data-page="usuarios"><span>♙</span>Usuarios</button><button data-page="configuracion"><span>⚙</span>Configuración</button></nav><div class="sidebottom"><div class="userbox"><div id="avatar" class="avatar">A</div><div><b id="sideName">Administrador</b><small id="sideRole">Administrador</small></div></div></div></aside><main class="main"><header class="topbar"><div class="crumb">Operación <b>/</b> <span id="crumbPage">Salón</span></div><div class="topright"><span class="clock" id="today"></span><select class="select" id="branchSelect" title="Sede activa"></select><button class="btn small" id="logout">Salir</button></div></header><div id="content" class="content"></div></main></div>
+<div id="modalroot"></div><div id="toastroot"></div><div class="printticket" id="printticket"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
