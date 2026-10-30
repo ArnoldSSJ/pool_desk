@@ -47,7 +47,7 @@ if ($currentBranch -ne 'main') {
     Invoke-Git branch -M main
 }
 
-Invoke-Git add -- app main.cjs preload.cjs package.json package-lock.json README.md LEEME.md .gitignore SUBIR_A_GITHUB.md subir-a-github.ps1
+Invoke-Git add -- index.html app main.cjs preload.cjs package.json package-lock.json README.md LEEME.md .gitignore SUBIR_A_GITHUB.md subir-a-github.ps1
 
 & git -C $ProjectRoot diff --cached --quiet
 $diffExit = $LASTEXITCODE
